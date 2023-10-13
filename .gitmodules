@@ -1,8 +1,8 @@
 [submodule "moments-backend"]
 	path = moments-backend
 	url = https://github.com/wellingtonmacena/moments-backend.git
-	branch = dev
+	branch = main
 [submodule "moments-frontend-web"]
 	path = moments-frontend-web
 	url = https://github.com/wellingtonmacena/moments-frontend-web.git
-	branch = dev
+	branch = main
