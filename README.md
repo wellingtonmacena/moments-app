@@ -88,7 +88,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 This is an example of how to list things you need to use the software and how to install them.
 
-You need  DOCKER, NODEJS, and .NET 6.0 installed in your machine first of all. You can download them in the following links:
+You need <b><i>Docker</i></b>, <b><i>Node.Js</i></b>, and <b><i>.NET 6.0 </i></b>installed in your machine first of all. You can download them in the following links:
 
   ```sh
   https://docs.docker.com/get-docker/
@@ -105,18 +105,20 @@ You need  DOCKER, NODEJS, and .NET 6.0 installed in your machine first of all. Y
 ## Running
 ### Backend
 
-1. Clone the repo with all its submodules,open a terminal and type:
+1. Clone Git repository:
    ```sh
    git clone --recurse-submodules https://github.com/wellingtonmacena/moments-app
    ```
-2. Enter in 'moments-backend' folder, open a terminal and type: 
+    This whill clone Git repository with all its submodules
+
+2. Compose Docker containers: 
     ```sh
-    docker-compose up -d
+    * cd moments-backend
+    * docker-compose up -d
     ```
     This will execute all necessary containers to run this aplication.
 
-
-3. Inside 'moments-backend' folder, open a terminal and type: 
+3. Execute database migrations(tables): 
     ```sh
     * cd Moments-Backend
     * dotnet ef database update --context LocalPostgresContext
@@ -130,20 +132,18 @@ You need  DOCKER, NODEJS, and .NET 6.0 installed in your machine first of all. Y
 
 ### Frontend
 
-1. Enter in 'moments-frontend-web' folder, open a terminal and type: 
+1. Install Angular CLI, if you dont have installed in your machine: 
     ```sh
      * moments-frontend-web
      * npm install -g @angular/cli
     ```
     This will install angular cli globally in your machine.
 
-
 2. Install NPM modules: 
     ```sh
     npm install
     ```
     This will install all necessary modules to run this aplication.
-
 
 3. Run frontend project: 
     ```sh
@@ -155,6 +155,8 @@ You need  DOCKER, NODEJS, and .NET 6.0 installed in your machine first of all. Y
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+### Now you have everything to start using the app
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
