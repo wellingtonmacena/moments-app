@@ -28,7 +28,6 @@
 </div>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -85,35 +84,71 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 
-You need have DOCKER installed in your machine first of all. You can download in the following link:
+You need  DOCKER, NODEJS, and .NET 6.0 installed in your machine first of all. You can download them in the following links:
 
   ```sh
   https://docs.docker.com/get-docker/
   ```
 
-### Installation
+  ```sh
+  https://nodejs.org/en/download
+  ```
 
+  ```sh
+  https://dotnet.microsoft.com/en-us/download
+  ```
 
-1. Clone the repo with all its submodules:
+## Running
+### Backend
+
+1. Clone the repo with all its submodules,open a terminal and type:
    ```sh
    git clone --recurse-submodules https://github.com/wellingtonmacena/moments-app
    ```
-2. After cloning the parent repo, to update code for all submodules(VERY IMPORTANT):
+2. Enter in 'moments-backend' folder, open a terminal and type: 
     ```sh
-    git submodule update --recursive --remote
+    docker-compose up -d
     ```
-3. Enter in 'moments-backend, open a terminal and type: 
+    This will execute all necessary containers to run this aplication.
+
+
+3. Inside 'moments-backend' folder, open a terminal and type: 
+    ```sh
+    * cd Moments-Backend
+    * dotnet ef database update --context LocalPostgresContext
+    ```
+    This will execute migrations that will create tables in database.
+
+4. Run backend project: 
+    ```sh
+    * dotnet run
+    ```
+
+### Frontend
+
+1. Enter in 'moments-frontend-web' folder, open a terminal and type: 
+    ```sh
+     * moments-frontend-web
+     * npm install -g @angular/cli
+    ```
+    This will install angular cli globally in your machine.
+
+
+2. Install NPM modules: 
     ```sh
     npm install
     ```
+    This will install all necessary modules to run this aplication.
 
+
+3. Run frontend project: 
+    ```sh
+    npm start
+    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -146,7 +181,6 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 
@@ -155,11 +189,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- CONTACT -->
 ## Contact
 
-My personal email: wellington.macena.23@gmail.com
+Any problem or question installing the project, you can message me though my personal email: wellington.macena.23@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
